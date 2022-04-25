@@ -2,13 +2,14 @@
 
 namespace AddressBookProblems
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the address book problem");
             AddressBookClass ad = new AddressBookClass();
-            while (true)
+
+            while (true) // it will give infinite loop
             {
                 Console.WriteLine("\nSelect Any one Operation: ");
                 Console.WriteLine("1. To Add New Person: ");
@@ -54,7 +55,7 @@ namespace AddressBookProblems
                         break;
 
                     case 2:
-                        ad.Display();
+                        ad.Display(); // here invoked Display method 
                         break;
                 }
             }
