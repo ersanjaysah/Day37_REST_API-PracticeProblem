@@ -82,6 +82,22 @@ namespace AddressBookProblems
                     person[i].Email = Console.ReadLine();
                 }
             }
+            string jsonData = JsonConvert.SerializeObject(person);
+            File.WriteAllText(@"E:\BridgeLabzAssignment\Day37_PracticeProblems\AddressBookProblems\AddressBookProblems\personDetails.json", jsonData);
+        }
+        public void Remove(string First_Name)
+        {
+            Person pers = null;
+            foreach (Person p in person)
+            {
+                if (p.First_Name == First_Name)
+                {
+                    pers = p;
+                }
+            }
+            person.Remove(pers);
+            string jsonData = JsonConvert.SerializeObject(person);
+            File.WriteAllText(@"E:\BridgeLabzAssignment\Day37_PracticeProblems\AddressBookProblems\AddressBookProblems\personDetails.json", jsonData);
         }
     }
 }

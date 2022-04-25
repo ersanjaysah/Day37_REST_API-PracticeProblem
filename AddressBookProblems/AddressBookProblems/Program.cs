@@ -14,7 +14,8 @@ namespace AddressBookProblems
                 Console.WriteLine("\nSelect Any one Operation: ");
                 Console.WriteLine("1. To Add New Person: ");
                 Console.WriteLine("2. To Display Contacts: ");
-                Console.WriteLine("3. To Update");
+                Console.WriteLine("3. To Update details");
+                Console.WriteLine("4. To Delete Details");
                 int read = int.Parse(Console.ReadLine());
                 switch (read)
                 {
@@ -62,6 +63,13 @@ namespace AddressBookProblems
                         Console.WriteLine("Enter the name to Update");
                         string Name=Console.ReadLine();
                         ad.UpdateAddress(Name);
+                        break;
+                    case 4:
+                        ad.Display();
+                        Console.WriteLine("\n");
+                        Console.WriteLine("Enter the first name which you want to detete");
+                        string Name1 = Console.ReadLine();
+                        ad.Remove(Name1);
                         break;
                 }
             }
