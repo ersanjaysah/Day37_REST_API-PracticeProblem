@@ -14,6 +14,7 @@ namespace AddressBookProblems
                 Console.WriteLine("\nSelect Any one Operation: ");
                 Console.WriteLine("1. To Add New Person: ");
                 Console.WriteLine("2. To Display Contacts: ");
+                Console.WriteLine("3. To Update");
                 int read = int.Parse(Console.ReadLine());
                 switch (read)
                 {
@@ -56,6 +57,11 @@ namespace AddressBookProblems
 
                     case 2:
                         ad.Display(); // here invoked Display method 
+                        break;
+                    case 3:
+                        Console.WriteLine("Enter the name to Update");
+                        string Name=Console.ReadLine();
+                        ad.UpdateAddress(Name);
                         break;
                 }
             }

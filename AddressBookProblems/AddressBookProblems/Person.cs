@@ -58,5 +58,30 @@ namespace AddressBookProblems
             else
                 person = new List<Person>();
         }
+        public void UpdateAddress(string First_name)
+        {
+            for (int i = 0; i < person.Count; i++)
+            {
+                if (person[i].First_Name==First_name)
+                {
+                    Console.WriteLine("Enter first name");
+                    person[i].First_Name= Console.ReadLine();
+                    Console.WriteLine("Enter last name");
+                    person[i].Last_Name = Console.ReadLine();
+                    Console.WriteLine("Enter Address");
+                    person[i].Address= Console.ReadLine();
+                    Console.WriteLine("Enter city");
+                    person[i].City = Console.ReadLine();
+                    Console.WriteLine("Enter state");
+                    person[i].State = Console.ReadLine();
+                    Console.WriteLine("Enter pin code");
+                    person[i].PostalCode = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Enter Phone Number: ");
+                    person[i].PhoneNumber = long.Parse(Console.ReadLine());
+                    Console.WriteLine("Enter Email id: ");
+                    person[i].Email = Console.ReadLine();
+                }
+            }
+        }
     }
 }
