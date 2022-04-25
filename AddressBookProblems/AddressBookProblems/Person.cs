@@ -22,7 +22,7 @@ namespace AddressBookProblems
         public long PhoneNumber;
         public string Email;
 
-        public string Result()  // It will show the result
+        public string Result()  // It will show the result.
         {
             return "\nName is: " + First_Name + " " + Last_Name + "\nAddress: " + Address + "\nCity is " + City +
                 "\nState is " + State + "\nPostal code is: " + PostalCode + "\nPhone: " + PhoneNumber + "\nEmail is " + Email;
